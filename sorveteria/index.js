@@ -20,12 +20,17 @@ class Sorvete {
   }
 
   concluirPedido() {
-    this.counter++;
-    this.toast.innerHTML = `<p>Bom apetite: ${this.sabores}</p> <span>clique para sair</span>`;
-    this.toast.style.display = "block";
-    this.sabores = [];
-    this.titulo.innerText = `${this.counter} sorvete(s) pedidos!`;
-    this.imprimirSorvete();
+    if (this.sabores.length <= 0) {
+      this.toast.innerHTML = `<p>Adicione pelo menos um sabor!</p>`;
+      this.toast.style.display = "block";
+    } else {
+      this.counter++;
+      this.toast.innerHTML = `<p>Bom apetite: ${this.sabores}</p> <span>clique para sair</span>`;
+      this.toast.style.display = "block";
+      this.sabores = [];
+      this.titulo.innerText = `${this.counter} sorvete(s) pedidos!`;
+      this.imprimirSorvete();
+    }
   }
 
   imprimirSorvete() {

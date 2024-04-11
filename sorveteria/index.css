@@ -7,6 +7,15 @@
   color: rgb(24, 23, 22);
 }
 
+:root {
+  --bg-morango: rgb(255, 0, 76);
+  --bg-morango-light: rgba(231, 161, 182, 0.219);
+  --bg-creme: rgb(255, 233, 200);
+  --bg-creme-light: rgb(243, 211, 162);
+  --bg-chocolate: rgb(75, 35, 13);
+  --bg-chocolate-light: rgba(94, 57, 37, 0.315);
+}
+
 body {
   background: linear-gradient(
     90deg,
@@ -31,6 +40,10 @@ button {
   text-transform: uppercase;
   font-weight: 800;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .morango,
@@ -44,7 +57,7 @@ button {
 }
 
 .morango {
-  background-color: rgb(255, 0, 76);
+  background-color: var(--bg-morango);
   color: rgb(65, 14, 29);
 }
 
@@ -54,7 +67,7 @@ button {
 }
 
 .chocolate {
-  background-color: rgb(75, 35, 13);
+  background-color: var(--bg-chocolate);
   color: rgb(243, 132, 41);
 }
 
@@ -72,28 +85,65 @@ button {
 }
 
 .morango-sabor {
+  cursor: pointer;
+
   width: 5em;
   height: 5em;
   border-radius: 100%;
-  background-color: rgb(255, 0, 76);
+  background-color: var(--bg-morango);
+  position: relative;
+}
+
+.morango-sabor::before {
+  content: "";
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  border-radius: 80%;
+  background-color: var(--bg-morango-light);
+}
+
+.creme-sabor::before {
+  content: "";
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  border-radius: 80%;
+  background-color: var(--bg-creme-light);
+}
+
+.chocolate-sabor::before {
+  content: "";
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  border-radius: 80%;
+  background-color: var(--bg-chocolate-light);
 }
 
 .creme-sabor {
+  cursor: pointer;
+
   width: 5em;
   height: 5em;
   border-radius: 100%;
-  background-color: rgb(255, 233, 200);
-}
-
-.formLayout {
-  max-width: 50%;
+  background-color: var(--bg-creme);
+  position: relative;
 }
 
 .chocolate-sabor {
+  cursor: pointer;
   width: 5em;
   height: 5em;
   border-radius: 100%;
-  background-color: rgb(75, 35, 13);
+  background-color: var(--bg-chocolate);
+  position: relative;
 }
 
 .finalizarPedidoBtn {
@@ -118,4 +168,8 @@ button {
   background-color: antiquewhite;
   margin: 1em;
   cursor: crosshair;
+}
+
+.formLayout {
+  max-width: 50%;
 }
