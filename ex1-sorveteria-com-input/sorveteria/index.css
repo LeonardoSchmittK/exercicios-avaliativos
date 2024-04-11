@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(24, 23, 22);
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(237, 237, 237, 0.404) 0%,
+    rgba(253, 255, 146, 0.473) 35%,
+    rgba(221, 0, 255, 0.068) 100%
+  );
+}
+
+.layout {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  border: 0;
+  padding: 0.8em;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.morango,
+.creme,
+.chocolate {
+  border-radius: 0.6em;
+  margin-left: 0.3em;
+}
+
+.titulo {
+}
+
+.morango {
+  background-color: rgb(255, 0, 76);
+  color: rgb(65, 14, 29);
+}
+
+.creme {
+  background-color: rgb(255, 233, 200);
+  color: rgb(148, 111, 82);
+}
+
+.chocolate {
+  background-color: rgb(75, 35, 13);
+  color: rgb(243, 132, 41);
+}
+
+.casca {
+  width: 5em;
+  height: 5em;
+  background-color: rgb(253, 174, 71);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform: rotate(180deg);
+  border-radius: 10px;
+}
+
+.sabores {
+  margin-top: 1em;
+}
+
+.morango-sabor {
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background-color: rgb(255, 0, 76);
+}
+
+.creme-sabor {
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background-color: rgb(255, 233, 200);
+}
+
+.formLayout {
+  max-width: 50%;
+}
+
+.chocolate-sabor {
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background-color: rgb(75, 35, 13);
+}
+
+.finalizarPedidoBtn {
+  background-color: rgb(182, 103, 255);
+  color: rgb(47, 16, 77);
+  margin: 1em;
+  transition: 100ms linear all;
+}
+
+.finalizarPedidoBtn:hover {
+  box-shadow: 9px 9px 60px rgba(139, 58, 214, 0.603);
+  transition: 100ms linear all;
+}
+
+.toast {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5em;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  margin: 1em;
+  cursor: crosshair;
+}

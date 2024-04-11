@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorveteria</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <h1 class="titulo">Sorveteria dos Arrays!</h1>
+      <section class="formLayout">
+        <p>Adicione até 3 sabores e clique na bola para remover!</p>
+        <button onclick="sorvetao.addSabor('chocolate')" class="chocolate">
+          Chocolate
+        </button>
+        <button onclick="sorvetao.addSabor('creme')" class="creme">
+          Creme
+        </button>
+        <button onclick="sorvetao.addSabor('morango')" class="morango">
+          Morango
+        </button>
+        <button class="finalizarPedidoBtn" onclick="sorvetao.concluirPedido()">
+          Finalizar pedido!
+        </button>
+      </section>
+      <section class="sorvete">
+        <div class="sabores"></div>
+        <div class="casca"></div>
+      </section>
+    </div>
+
+    <div class="toast" onclick="this.style.display='none'">
+      <h3>Bom apetite!</h3>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
