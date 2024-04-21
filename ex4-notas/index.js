@@ -22,7 +22,7 @@ console.log(notasAcimaDe5);
 let soma = 0;
 
 for (let i = 0; i < notasAcimaDe5.length; ++i) {
-  soma += notasAcimaDe5[0];
+  soma += notasAcimaDe5[i];
 }
 
 const quantidadeNotasAcimaDe5 = notasAcimaDe5.length;
